@@ -14,10 +14,6 @@ RUN cd /tmp \
   && cd coq-8.5pl2 \
   && ./configure -prefix /usr/local \
   && make \
-  && make install
-
-
-RUN mkdir /workspace
-VOLUME /workspace
-WORKDIR /workspace
-ENTRYPOINT "coqide"
+  && make install \
+  && cd .. \
+  && rm -rf coq-8.5pl2
