@@ -1,5 +1,5 @@
 # Coq theorem prover
-FROM ubuntu:16.04
+FROM ubuntu:latest
 
 MAINTAINER mike.aizatsky@gmail.com
 
