@@ -1,7 +1,5 @@
 # Jupyter + IJulia
-
-FROM skippa/anaconda
-
+FROM skippa/base
 MAINTAINER mike.aizatsky@gmail.com
 
 RUN conda update anaconda

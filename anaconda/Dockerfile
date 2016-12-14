@@ -1,16 +1,11 @@
-FROM ubuntu:latest
-
+FROM skippa/base
 MAINTAINER mike.aizatsky@gmail.com
-
-ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get upgrade -y
 
 ENV ANACONDA_VERSION "4.2.0"
 ENV CONDA_PATH "/opt/conda"
+ENV PATH "$CONDA_PATH/bin:$PATH"
 
 RUN apt-get install -y wget bzip2
-
-ENV PATH "$CONDA_PATH/bin:$PATH"
 
 RUN wget --quiet https://repo.continuum.io/archive/Anaconda2-$ANACONDA_VERSION-Linux-x86_64.sh -O anaconda.sh && \
     /bin/bash anaconda.sh -b -p $CONDA_PATH && \

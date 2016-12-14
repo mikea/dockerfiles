@@ -1,10 +1,7 @@
 # Coq theorem prover
-FROM ubuntu:latest
-
+FROM skippa/bases
 MAINTAINER mike.aizatsky@gmail.com
 
-ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y wget ocaml ocaml-native-compilers camlp5 liblablgtk2-ocaml-dev liblablgtksourceview2-ocaml-dev libgtk2.0-dev
 
 ENV VERSION "8.5pl3"

@@ -1,5 +1,7 @@
 #!/bin/bash -eux
 
+docker build --pull -t skippa/base base
+
 docker build --pull -t skippa/coq coq
 docker build --pull -t skippa/coqide coqide
 
