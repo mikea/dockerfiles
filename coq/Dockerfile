@@ -5,7 +5,7 @@ MAINTAINER mike.aizatsky@gmail.com
 RUN apt-get update && apt-get upgrade -y && \
     apt-get install -y wget ocaml ocaml-native-compilers camlp5 liblablgtk2-ocaml-dev liblablgtksourceview2-ocaml-dev libgtk2.0-dev
 
-ENV VERSION "8.5pl3"
+ENV VERSION "8.6"
 
 RUN cd /tmp \
   && wget https://coq.inria.fr/distrib/V$VERSION/files/coq-$VERSION.tar.gz \
