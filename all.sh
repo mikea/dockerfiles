@@ -2,9 +2,9 @@
 
 docker build --pull -t skippa/base base
 
-docker build --pull -t skippa/coq coq
-docker build --pull -t skippa/coqide coqide
+docker build -t skippa/coq coq
+docker build -t skippa/coqide coqide
 
-docker build --pull -t skippa/anaconda anaconda
-docker build --pull -t skippa/julia julia
-docker build --pull -t skippa/ijulia ijulia
+docker build -t skippa/anaconda anaconda
+docker build -t skippa/julia julia
+docker build -t skippa/ijulia ijulia
