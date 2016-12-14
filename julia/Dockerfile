@@ -2,9 +2,9 @@
 FROM skippa/base
 MAINTAINER mike.aizatsky@gmail.com
 
-RUN apt-get update && apt-get upgrade -y && apt-get install software-properties-common -y
-RUN add-apt-repository ppa:staticfloat/juliareleases
-RUN add-apt-repository ppa:staticfloat/julia-deps
+RUN echo "deb http://ppa.launchpad.net/staticfloat/julia-deps/ubuntu xenial main" > /etc/apt/sources.list.d/staticfloat-ubuntu-julia-deps-xenial.list
+RUN echo "deb http://ppa.launchpad.net/staticfloat/juliareleases/ubuntu xenial main" > /etc/apt/sources.list.d/staticfloat-ubuntu-juliareleases-xenial.list
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CF979FFA3D3D3ACC
 RUN apt-get update && apt-get install julia -y
 
 RUN julia -e "Pkg.init()"
