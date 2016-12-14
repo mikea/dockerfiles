@@ -1,5 +1,5 @@
 # Coq theorem prover
-FROM skippa/bases
+FROM skippa/base
 MAINTAINER mike.aizatsky@gmail.com
 
 RUN apt-get install -y wget ocaml ocaml-native-compilers camlp5 liblablgtk2-ocaml-dev liblablgtksourceview2-ocaml-dev libgtk2.0-dev
