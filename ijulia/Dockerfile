@@ -8,3 +8,11 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CF979FFA3D3D3ACC
 RUN apt-get update && apt-get install julia -y
 
 RUN julia -e "Pkg.init(); Pkg.add(\"IJulia\")"
+
+RUN mkdir /workspace
+WORKDIR /workspace
+
+ENV PORT 8888
+EXPOSE $PORT
+
+CMD /opt/conda/bin/jupyter notebook --notebook-dir=$WORKDIR --ip='*' --port=$PORT --no-browser
