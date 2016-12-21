@@ -8,5 +8,3 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys CF979FFA3D3D3ACC
 RUN apt-get update && apt-get install julia -y
 
 RUN julia -e "Pkg.init(); Pkg.add(\"IJulia\")"
-
-CMD "julia"
