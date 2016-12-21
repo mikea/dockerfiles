@@ -14,5 +14,7 @@ RUN wget --quiet https://repo.continuum.io/archive/Anaconda2-$ANACONDA_VERSION-L
 RUN conda update anaconda -y
 
 ENV JUPYTER "/opt/conda/bin/jupyter"
+ENV PORT 8888
+EXPOSE $PORT
 
-CMD [ "/bin/bash" ]
+CMD [ "$JUPYTER", "notebook", "--no-browser", "--port", $PORT ]
