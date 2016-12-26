@@ -21,7 +21,4 @@ RUN wget --quiet https://repo.continuum.io/archive/Anaconda3-$ANACONDA_VERSION-L
 RUN conda update anaconda -y
 ENV JUPYTER "/opt/conda/bin/jupyter"
 
-RUN mkdir /workspace
-WORKDIR /workspace
-
 CMD ["jupyter", "notebook", "--no-browser", "--ip='*'", "--port=8888", "--notebook-dir=/workspace"]

@@ -9,4 +9,4 @@ RUN apt-get update && apt-get install julia libzmq3-dev -y
 
 RUN julia -e "Pkg.init()"
 
-CMD "julia"
+ENTRYPOINT ["julia"]
