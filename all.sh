@@ -6,5 +6,6 @@ docker build -t skippa/coq coq
 docker build -t skippa/coqide coqide
 
 docker build -t skippa/anaconda anaconda
+docker build -t skippa/julia-nopkg julia-nopkg
 docker build -t skippa/julia julia
 docker build -t skippa/ijulia ijulia
