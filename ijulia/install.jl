@@ -24,7 +24,8 @@ for pkg in ["IJulia",
             "JLD",
             # Other Packages
             "Iterators",
-            "BenchmarkTools"
+            "BenchmarkTools",
+            "ProfileView",
             ]
   println("Installing ", pkg)
   Pkg.add(pkg)
