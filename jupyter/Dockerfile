@@ -5,3 +5,6 @@
  RUN conda install --yes python-graphviz
  RUN pip install yfinance ib_insync watermark
  
+ RUN conda info
+ RUN conda list
+ 
