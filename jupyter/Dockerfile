@@ -7,8 +7,7 @@
  RUN jupyter labextension install \
     @jupyterlab/katex-extension \
     @jupyterlab/celltags \
-    @jupyterlab/git \
-    @jupyterlab/google-drive
+    @jupyterlab/git
  
  RUN conda info
  RUN conda list
