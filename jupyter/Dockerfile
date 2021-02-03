@@ -8,7 +8,7 @@
     @jupyterlab/katex-extension \
     @jupyterlab/celltags \
     @jupyterlab/git
- RUN conda install -c conda-forge "elyra>=2.0.1" && jupyter lab build
+ #RUN conda install -c conda-forge "elyra>=2.0.1" && jupyter lab build
  
  RUN pip list
  RUN conda info
