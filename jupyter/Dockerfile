@@ -3,7 +3,7 @@
  RUN conda update --all --yes
  RUN conda install --all --yes 'pymc3>=3.11' mkl-service
  RUN conda install --all --yes python-graphviz jupyterlab-git
- RUN conda install --all --yes pytorch tochvision torchaudio cpuonly -c pytorch
+ RUN conda install --all --yes pytorch torchvision torchaudio cpuonly -c pytorch
  RUN pip install --upgrade yfinance ib_insync watermark
  RUN jupyter labextension install \
     @jupyterlab/katex-extension \
