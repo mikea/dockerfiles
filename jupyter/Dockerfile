@@ -1,9 +1,9 @@
 FROM jupyter/scipy-notebook
  
 RUN conda update --all --yes \
- && conda install --all --yes 'pymc3>=3.11' mkl-service python-graphviz numpy \
- && conda install --all --yes pytorch torchvision torchaudio cpuonly -c pytorch \
- && conda install --all --yes -c anaconda tensorflow
+ && conda install --yes 'pymc3>=3.11' mkl-service python-graphviz numpy \
+ && conda install --yes -c pytorch pytorch torchvision torchaudio cpuonly \
+ && conda install --yes -c anaconda tensorflow
 RUN pip install --upgrade yfinance ib_insync watermark
 RUN jupyter labextension install \
    @jupyterlab/katex-extension \
