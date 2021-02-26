@@ -3,6 +3,7 @@ FROM jupyter/scipy-notebook
 RUN conda update --all --yes \
  && conda install --yes 'pymc3>=3.11' mkl-service python-graphviz numpy \
  && conda install --yes -c pytorch pytorch torchvision torchaudio cpuonly \
+ && conda install --yes -c conda-forge pytorch-lightning \
  && pip install --upgrade yfinance ib_insync watermark tensorflow \
  && jupyter labextension install @jupyterlab/katex-extension @jupyterlab/celltags
  
