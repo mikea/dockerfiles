@@ -4,7 +4,7 @@ RUN echo "updating conda" \
  && conda update --all --yes \
  && echo "pip install" \
  && pip install --upgrade \
-    'pymc3>=3.11' python-graphviz \
+    'pymc3>=3.11' \
     "torch>=1.7" torchvision torchaudio pytorch-lightning \
     yfinance ib_insync watermark tensorflow "numpy>=1.20" \
     jupyterlab_hdf hdf5plugin xgboost \
