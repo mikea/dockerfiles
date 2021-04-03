@@ -9,7 +9,8 @@ RUN echo "updating conda" \
     yfinance ib_insync watermark tensorflow "numpy>=1.20" \
     jupyterlab_hdf hdf5plugin xgboost \
  && echo "jupyter install" \
- && jupyter labextension install @jupyterlab/katex-extension @jupyterlab/celltags @jupyterlab/hdf5
+ && jupyter labextension install @jupyterlab/katex-extension @jupyterlab/celltags 
+ # @jupyterlab/hdf5
  
  
 #   @jupyterlab/git
