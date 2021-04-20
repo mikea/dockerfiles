@@ -1,6 +1,6 @@
 FROM jupyter/scipy-notebook
 
-RUN apt install -y quantlib-python 
+RUN sudo apt install -y quantlib-python 
 
 RUN echo "updating conda" \
  && conda update --all --yes \
