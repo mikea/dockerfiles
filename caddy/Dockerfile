@@ -1,4 +1,4 @@
-FROM caddy:=builder AS builder
+FROM caddy:builder AS builder
 RUN xcaddy build \
     --with--with github.com/caddy-dns/digitalocean
 
